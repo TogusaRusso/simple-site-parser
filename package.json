@@ -1,10 +1,7 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "my-glitch-app",
+  "name": "simple-site-parser",
   "version": "0.0.1",
-  "description": "What am I about?",
+  "description": "Site that gets URL of the webpage from user, parses this webpage and shows all H1 tags on this page",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -19,7 +16,7 @@
     "node": "8.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/welcome-project"
+    "url": "https://github.com/TogusaRusso/simple-site-parser"
   },
   "license": "MIT",
   "keywords": [
