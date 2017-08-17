@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title Simple Site Parser
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css', rel='stylesheet', media='screen')
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons", rel='stylesheet')
+  body
+    form(action="/", method="post")
+      .row
+        .input-field.col.s12
+          input#url(name="url", type="text", value=prevUrl || '')
+          label(for='url') Site url
+    if headers
+      ul.collection
+        each header in headers
+          li.collection-item= header
+          
+    script(src='https://code.jquery.com/jquery-3.2.1.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js')
+    //- Если прилетела ошибка, выведем её через Toast из Materialize
+    if error
+      script.
+        $(() =>  Materialize.toast('#{error}', 4000))
